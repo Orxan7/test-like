@@ -7,11 +7,10 @@ export default function reducer(state=initialState, action) {
     switch(action.type) {
         case 'ADD_POSTS':
             const { posts } = action.payload; 
-            const new_posts = posts.map((item)=>({url:item, like:false}))
             return {
                 posts: [
                     ...state.posts,
-                    ...new_posts
+                    ...posts.map((item)=>({url:item, like:false}))
                 ],
             }
         case 'LIKE_POST':
