@@ -9,7 +9,7 @@ function MainPage() {
     const dispatch = useDispatch()
 
     const getPosts = ()=>{
-        fetch('http://shibe.online/api/shibes?count=10&urls=true&httpsUrls=true')
+        fetch('http://shibe.online/api/shibes?count=10&urls=true&httpsUrls=false')
             .then(res=>res.json())
             .then(data=>dispatch(addPosts(data)))
     }
