@@ -1,12 +1,23 @@
-.anticon {
+.anticon-heart {
     position: absolute;
     bottom: 20px;
     left: 190px;
     transition: transform .2s;
 }
 
-.anticon:hover {
-    transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+.anticon-heart:hover {
+    transform: scale(1.3);
     cursor: pointer;
 }
 
+.anticon-delete {
+    position: absolute;
+    left: 200px;
+    top: 20px;
+    transition: transform .2s;
+}
+
+.anticon-delete:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}

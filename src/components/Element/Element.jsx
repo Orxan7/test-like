@@ -1,8 +1,7 @@
-import { HeartFilled, HeartOutlined } from "@ant-design/icons";
+import { DeleteOutlined, HeartFilled, HeartOutlined } from "@ant-design/icons";
 import { Col, Image } from "antd";
-import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { likePost, unlikePost } from "../../redux/actions";
+import { deletePost, likePost, unlikePost } from "../../redux/actions";
 
 import "./Element.css"
 
@@ -17,6 +16,13 @@ function Element({item, id}) {
           height={250}
           src={item.url}
           preview={false}
+        />
+        <DeleteOutlined 
+            style={{
+              fontSize: "30px",
+              color: "white"
+            }}        
+            onClick={()=>dispatch(deletePost(id))}
         />
         {!item.like?
           <HeartOutlined 

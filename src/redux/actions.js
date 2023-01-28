@@ -24,3 +24,13 @@ export function unlikePost(idx) {
     }
   }
 }
+
+export function deletePost(idy) {
+  return {
+    type: 'DELETE_POST',
+    payload: {
+        idy: idy
+    }
+  }
+}
+

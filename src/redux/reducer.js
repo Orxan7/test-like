@@ -30,6 +30,14 @@ export default function reducer(state=initialState, action) {
                     return item
                 })]
             }
+        case 'DELETE_POST':
+            const { idy } = action.payload;
+            return {
+                posts: [...state.posts.filter((item, id)=>{
+                    if(id===idy)return false
+                    return true
+                })]
+            }
         default:
           return state;
     }
